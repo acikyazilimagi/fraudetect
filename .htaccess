@@ -1,0 +1,10 @@
+DirectoryIndex index.php
+<Files ~ “^\.json”>
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
+
+RewriteEngine on
+RewriteRule ^([0-9a-zA-Z-_]+)$ index.php?sayfa_adi_v=$1 [L,QSA]
+RewriteRule ^postV4/([0-9a-zA-Z-_]+)$ postV4-i.php?islem_adi_v=$1 [L,QSA]

@@ -1,0 +1,26 @@
+<?php
+date_default_timezone_set("Europe/Istanbul");
+error_reporting(0);
+$directory = __DIR__;
+
+header("Content-Type: text/plain");
+
+include("ayarlar/api-ayarlari.php");
+$apikey = $api_anahtarlari["list-api"];
+if($_GET["key"]!==$apikey) {
+    exit;
+}
+
+if(!is_numeric($_GET["id"])) { exit; }
+
+$sitelerlistele = $baglanti->prepare("SELECT * FROM eklenen_siteler WHERE durum = :durum order by id asc");
+$sitelerlistele->bindParam(":durum", $_GET["id"], PDO::PARAM_INT);
+$sitelerlistele->execute();
+
+if($sitelerlistele->rowCount()) {
+    foreach($sitelerlistele as $siteverisi) {
+        echo $siteverisi["site_tam_adresi"]."
+";
+    }
+}
+?>
