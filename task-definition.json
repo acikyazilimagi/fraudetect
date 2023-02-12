@@ -5,10 +5,6 @@
     {
       "dnsSearchDomains": null,
       "environmentFiles": [
-        {
-          "value": "arn:aws:s3:::credent-bucket/fraud-detect.env",
-          "type": "s3"
-        }
       ],
       "logConfiguration": {
         "logDriver": "awslogs",
@@ -53,6 +49,20 @@
         {
           "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:MYSQL_PASS::",
           "name": "MYSQL_PASS"
+        },
+        ,
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:API_KEY::",
+          "name": "API_KEY"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:LIST_API_KEY::",
+          "name": "LIST_API_KEY"
+        },
+        ,
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:DISCORD_WEB_HOOK::",
+          "name": "DISCORD_WEB_HOOK"
         }
       ],
       "dockerSecurityOptions": null,
