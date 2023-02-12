@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 if($inc!=1) { die(); }
 $v4_sistem_ayarlar_pr = array(
-    "sunucu" => $_ENV["MYSQL_HOST"],
+    "sunucu" => $_ENV["MYSQL_HOST"].":".$_ENV["MYSQL_PORT"],
     "veritabani" => $_ENV["MYSQL_NAME"],
     "kullanici" => $_ENV["MYSQL_USER"],
     "parola" => $_ENV["MYSQL_PASS"]
