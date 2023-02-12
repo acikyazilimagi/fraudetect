@@ -6,7 +6,7 @@ require('siniflar/usom.class.php');
 
 header("Content-Type: application/json; charset=utf-8");
 
-$apikey = getenv("API_KEY");
+$apikey = $_ENV["API_KEY"];
 if($_GET["key"]!==$apikey) {
     exit;
 }

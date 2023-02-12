@@ -5,7 +5,7 @@ $directory = __DIR__;
 
 header("Content-Type: text/plain");
 
-$apikey = getenv("LIST_API_KEY");
+$apikey = $_ENV["LIST_API_KEY"];
 if($_GET["key"]!==$apikey) {
     exit;
 }
