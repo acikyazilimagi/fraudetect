@@ -1,8 +1,8 @@
-name: Deploy FraudDetect
+name: Deploy to ECS
 
 on:
   push:
-    branches: ["main"]
+    branches: ["prod"]
 
 jobs:
   deploy:
@@ -53,4 +53,4 @@ jobs:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: fraudetect
         cluster: base-cluster
-        wait-for-service-stability: true
+        wait-for-service-stability: false
