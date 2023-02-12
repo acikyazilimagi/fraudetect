@@ -61,7 +61,11 @@
         {
           "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:DISCORD_WEB_HOOK::",
           "name": "DISCORD_WEB_HOOK"
-        }
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:MYSQL_NAME::",
+          "name": "MYSQL_NAME"
+        }        
       ],
       "dockerSecurityOptions": null,
       "memory": 4096,
