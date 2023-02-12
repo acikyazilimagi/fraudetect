@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://fraudetect.net/img/sosyal.svg">
 <meta property="og:locale" content="tr_TR">
 <title>Fraud Detect  - Şüpheli Adres Bildirimi</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://leventemre.com/app/fraudetect-style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
