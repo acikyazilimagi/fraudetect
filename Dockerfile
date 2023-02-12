@@ -32,8 +32,5 @@ RUN docker-php-ext-install mysqli curl
 # Enable the MySQL extension
 RUN docker-php-ext-enable mysqli
 
-# Test the GD extension
-RUN php -r 'var_dump(gd_info());' 
-
 # Restart Apache
 RUN /etc/init.d/apache2 restart
