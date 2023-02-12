@@ -22,7 +22,7 @@ RUN apt-get install -y  zlib1g-dev \
                         libpng-dev \
                         curl \
                         net-tools \
-                        php-sqlite3 \
+                        php5-sqlite3 \
                         iputils-ping \
                         vim \
                         nano
