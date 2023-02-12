@@ -2,10 +2,10 @@
 error_reporting(0);
 if($inc!=1) { die(); }
 $v4_sistem_ayarlar_pr = array(
-    "sunucu" => "localhost",
-    "veritabani" => "panel",
-    "kullanici" => "root",
-    "parola" => ""
+    "sunucu" => getenv("MYSQL_HOST"),
+    "veritabani" => getenv("MYSQL_NAME"),
+    "kullanici" => getenv("MYSQL_USER"),
+    "parola" => getenv("MYSQL_PASS")
 );
 
 $baglanti = new PDO("mysql:host=".$v4_sistem_ayarlar_pr["sunucu"].";dbname=".$v4_sistem_ayarlar_pr["veritabani"].";charset=utf8", $v4_sistem_ayarlar_pr["kullanici"], $v4_sistem_ayarlar_pr["parola"]);
