@@ -7,4 +7,5 @@ Satisfy All
 
 RewriteEngine on
 RewriteRule ^([0-9a-zA-Z-_]+)$ index.php?sayfa_adi_v=$1 [L,QSA]
+RewriteRule ^([0-9a-zA-Z-_]+)/$  /$1 [L,R=301,NC]
 RewriteRule ^postV4/([0-9a-zA-Z-_]+)$ postV4-i.php?islem_adi_v=$1 [L,QSA]
