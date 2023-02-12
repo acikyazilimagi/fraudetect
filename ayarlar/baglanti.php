@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
 if($inc!=1) { die(); }
 $v4_sistem_ayarlar_pr = array(
     "sunucu" => $_ENV["MYSQL_HOST"],
