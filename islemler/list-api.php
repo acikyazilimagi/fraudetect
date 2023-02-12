@@ -5,8 +5,7 @@ $directory = __DIR__;
 
 header("Content-Type: text/plain");
 
-include("ayarlar/api-ayarlari.php");
-$apikey = $api_anahtarlari["list-api"];
+$apikey = getenv("LIST_API_KEY");
 if($_GET["key"]!==$apikey) {
     exit;
 }
