@@ -12,6 +12,7 @@ $baglanti = new PDO("mysql:host=".$v4_sistem_ayarlar_pr["sunucu"].";dbname=".$v4
 
     try {
     $baglanti->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $baglanti->setAttribute(PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT, false);
     return "1";
     }
     catch(PDOException $v4hata) {
