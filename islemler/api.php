@@ -6,8 +6,7 @@ require('siniflar/usom.class.php');
 
 header("Content-Type: application/json; charset=utf-8");
 
-include("ayarlar/api-ayarlari.php");
-$apikey = $api_anahtarlari["api"];
+$apikey = getenv("API_KEY");
 if($_GET["key"]!==$apikey) {
     exit;
 }
