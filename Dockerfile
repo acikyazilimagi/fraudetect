@@ -22,7 +22,6 @@ RUN apt-get install -y  zlib1g-dev \
                         libpng-dev \
                         curl \
                         net-tools \
-                        php5-sqlite3 \
                         iputils-ping \
                         vim \
                         nano
@@ -32,6 +31,8 @@ RUN docker-php-ext-install mysqli curl
 
 # Enable the MySQL extension
 RUN docker-php-ext-enable mysqli
+
+RUN docker-php-ext-install pdo pdo_mysql
 
 # Restart Apache
 RUN /etc/init.d/apache2 restart
