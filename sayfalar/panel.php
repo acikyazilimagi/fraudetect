@@ -155,7 +155,8 @@ $gosterilecek = 10;
                   <th>#</th>
                   <th>Site Adresi</th>
                   <th>Eklenme Adresi</th>
-                  <th>Ekleyen</th>
+                  <th>Ekleyen/Güncelleyen</th>
+                  <th>Eklenme/Güncelleme Tarihi</th>
                   <th>Durum</th>
                   <th>İşlem</th>
                 </tr>
@@ -235,7 +236,7 @@ $gosterilecek = 10;
                       $ekleyen = "Form Bildirisi";
                       $ekleyenicon = "fa fa-wpforms";
                     } elseif ($ekleyen_bilgisi["ekleyen_id"] == 3) {
-                      $ekleyen = "BOT";
+                      $ekleyen = "BOT(" . htmlspecialchars($ekleyen_bilgisi["bot_ip"]) .")";
                       $ekleyenicon = "fa fa-desktop";
                     }
 
@@ -278,6 +279,7 @@ $gosterilecek = 10;
                         <td>' . $usomappend . '<a href="' . $httpappend . '' . htmlspecialchars($siteveri["site_tam_adresi"], ENT_QUOTES) . '" rel="nofollow noopener noreferrer" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-link"></i> ' . htmlspecialchars(substr($siteveri["site_tam_adresi"], 0, 30), ENT_QUOTES) . '</a>' . $usomappendend . '</td>
                         <td><a href="#" class="btn btn-info btn-sm"><i class="' . $ekleyenicon . '"></i> ' . $ekleyen . '</a></td>
                         <td><a href="?durum=' . htmlspecialchars($siteveri["durum"]) . '" class="btn btn-' . $renk . ' btn-sm"><i class="' . $durumicon . '"></i> ' . $durum . '</a></td>
+                        <td><a href="#" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i> ' . htmlspecialchars(timeConvert($siteveri["eklenme_tarihi"])) . '</a></td>
                         <td><a href="#duzenle" onclick="duzenle(';
                     echo "'" . htmlspecialchars($siteveri["id"], ENT_QUOTES) . "', '" . htmlspecialchars($siteveri["site_adresi"], ENT_QUOTES) . "')" . '"';
                     echo 'style="color:white;" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i> Düzenle</a> <a onclick="sil(';
