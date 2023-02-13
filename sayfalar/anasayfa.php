@@ -1,47 +1,83 @@
 <?php if($inc!=1) { die(); } ?>
 <!DOCTYPE html>
-<html>
+<html lang="tr">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Fraudetect.net, afetler sonrasında halkımızın samimi duygularını suistimal eden kötü niyetli insanların engellenmesi amacıyla kurulmuş bir topluluk hizmetidir.">
-<meta property="og:title" content="Fraud Detect  - Şüpheli Adres Bildirimi">
-<meta property="og:description" content="Fraudetect.net, afetler sonrasında halkımızın samimi duygularını suistimal eden kötü niyetli insanların engellenmesi amacıyla kurulmuş bir topluluk hizmetidir.">
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://fraudetect.net">
-<meta property="og:image" content="https://fraudetect.net/img/sosyal.svg">
-<meta property="og:locale" content="tr_TR">
-<title>Fraud Detect  - Şüpheli Adres Bildirimi</title>
-<link rel="stylesheet" href="https://leventemre.com/app/fraudetect-style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Fraudetect.net, afetler sonrasında halkımızın samimi duygularını suistimal eden kötü niyetli insanların engellenmesi amacıyla kurulmuş bir topluluk hizmetidir.">
+    <meta name="keywords" content="fraudetect, fraud detect, şüpheli adres bildirimi, zararlı adres bildirimi, adres bildir, site bildir">
+    <meta property="og:title" content="Fraud Detect  - Şüpheli Adres Bildirimi">
+    <meta property="og:description" content="Fraudetect.net, afetler sonrasında halkımızın samimi duygularını suistimal eden kötü niyetli insanların engellenmesi amacıyla kurulmuş bir topluluk hizmetidir.">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fraudetect.net">
+    <meta property="og:image" content="https://fraudetect.net/img/banner.png">
+    <meta property="og:locale" content="tr_TR">
+    <title>Fraud Detect - Şüpheli Adres Bildirimi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://leventemre.com/app/fraud-main.css">
 </head>
 
-<body class="form-v4">
-<div class="page-content">
-<div class="form-v4-content">
-<div class="form-left">
-<h2><i class="fa fa-info-circle"></i> BILGILENDIRME</h2>
-<p class="text-1"><strong>Fraudetect.net</strong>, afetler sonrasında halkımızın samimi duygularını suistimal eden kötü niyetli insanların engellenmesi amacıyla kurulmuş bir topluluk hizmetidir.</p>
-<p class="text-2">Şikayet edebileceğiniz adres, hesap türleri: <strong>sahte bağış toplama</strong>, <strong>dolandırıcılık</strong>, <strong>bankacılık/oltalama</strong> ve benzeri.</p>
-</div>
-<form class="form-detail" action="javascript:void(0)" id="reportForm">
-<h2>ADRES BİLDİR</h2>
-<div class="form-row">
-<label for="your_email"><i class="fa fa-link"></i> Şüpheli Adres</label>
-<input type="text" name="site" class="input-text" value="" placeholder="https://supheli.adres" required autocomplete="off">
-</div>
-<div class="form-row-last" style="display:flex; justify-content:center;">
-<button type="submit" name="bildir" class="register" id="bildirbtn"><i class="fa fa-plus-circle"></i> Bildir</button>
-</div>
-<div class="alert" id="hata" style="display:none;"><i class="fa fa-exclamation-circle"></i> Hata: <span id="hata_mesaji"></span></div>
-<div class="form-row-last">
-<a href="https://discord.gg/itdepremyardim" rel="nofollow" class="discord"><i class="fab fa-discord"></i></a>
-<a href="https://github.com/acikkaynak/fraudetect/" rel="nofollow" class="github" style="margin-left:5px;"><i class="fab fa-github"></i></a>
-</div>
-</form>
-</div>
-</div>
-<script src="/js/jquery.min.js" type="text/javascript"></script>
-<script src="/js/anasayfa.js" type="text/javascript"></script>
+<body translate="no">
+
+    <div class="section">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                        <a href="/anasayfa" style="color:white;">
+                            <h1 class="mb-0 pb-3">FRAUDETECT</h1>
+                        </a>
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="arayuz">
+                                            <div class="adres-form">
+                                                <form id="reportForm" action="javascript:void()">
+                                                    <div class="section text-center">
+                                                        <h4 class="mb-4 pb-3 adres-baslik">Adres Bildirimi</h4>
+                                                        <div class="form-group">
+                                                            <input type="text" name="site" class="form-style" placeholder="https://supheli.adres" autocomplete="off" required>
+                                                            <i class="input-icon fa fa-link"></i>
+                                                        </div>
+                                                        <div><button type="submit" class="btn mt-4" id="bildirbtn"><i class="fa fa-plus-circle" style="margin-right:2px;"></i> bildir</button>
+                                                            <div class="hata" id="hata_mesaji" style="display:none;"></div>
+                                                        </div>
+                                                        <div style="display:flex;justify-content:center;margin-top:2rem;">
+                                                            <p class="mb-0 mt-4 text-center"><a href="https://github.com/acikkaynak/fraudetect" target="_blank" rel="nofollow" class="link">
+                                                                    <h4><i class="fab fa-github"></i></h4>
+                                                                </a></p>
+                                                            <p class="mb-0 mt-4 text-center" style="margin-left:6px;"><a href="https://discord.gg/itdepremyardim" target="_blank" rel="nofollow" class="link">
+                                                                    <h4><i class="fab fa-discord"></i></h4>
+                                                                </a></p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="section text-center">
+                                                                <div class="bilgi">
+                                                                    <strong>Fraudetect.net</strong>, afetler sonrasında halkımızın samimi duygularını suistimal eden kötü niyetli insanların engellenmesi amacıyla kurulmuş bir topluluk hizmetidir.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
 </body>
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/mainpage.js" type="text/javascript"></script>
+
 </html>
