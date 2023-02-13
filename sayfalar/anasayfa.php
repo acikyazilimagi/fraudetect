@@ -77,6 +77,7 @@
     </div>
 
 </body>
+
 <script src="/js/jquery.min.js" type="text/javascript"></script>
 <script src="/js/mainpage.js" type="text/javascript"></script>
 
