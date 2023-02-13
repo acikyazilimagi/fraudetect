@@ -43,7 +43,7 @@
           "name": "MYSQL_PORT"
         },
        {
-          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:MYSQL_HOST::",
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:366354050833:secret:fraudetect-prod-env-kVoj3x:MYSQL_USER::",
           "name": "MYSQL_USER"
         },
         {
