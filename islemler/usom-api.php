@@ -5,7 +5,7 @@ require('siniflar/usom.class.php');
 
 $apikey = getenv("API_KEY");
 if($_GET["key"]!==$apikey) {
-    exit;
+    die(json_encode(array("error_message" => "API KEY IS WRONG")));
 }
 
 $inc = 1;

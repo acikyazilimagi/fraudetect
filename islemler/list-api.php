@@ -7,7 +7,7 @@ header("Content-Type: text/plain");
 
 $apikey = $_ENV["LIST_API_KEY"];
 if($_GET["key"]!==$apikey) {
-    exit;
+    die(json_encode(array("error_message" => "API KEY IS WRONG")));
 }
 
 if(!is_numeric($_GET["id"])) { exit; }
