@@ -5,7 +5,7 @@ date_default_timezone_set("Europe/Istanbul");
 
 $islem_adi = @$_GET["islem_adi_v"];
 
-$izinverilenler = array("api", "test-api");
+$izinverilenler = array("api", "list-api", "usom-api");
 
 if(!in_array($islem_adi, $izinverilenler)) {
     if(empty(trim($_SERVER["HTTP_USER_AGENT"]))) {
