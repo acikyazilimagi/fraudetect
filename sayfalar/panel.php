@@ -1,9 +1,8 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(0);
 if($inc!=1) { die(); }
 if($_SESSION["oturum_durum"]==0) {
-  echo $_SESSION["oturum_durum"];
-    // header("Location: /".$sayfa_isimleri["giris-yap"]);
+    header("Location: /".$sayfa_isimleri["giris-yap"]);
     die();
 }
 
