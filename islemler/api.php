@@ -8,7 +8,7 @@ header("Content-Type: application/json; charset=utf-8");
 
 $apikey = $_ENV["API_KEY"];
 if($_GET["key"]!==$apikey) {
-    exit;
+    die(json_encode(array("error_message" => "API KEY IS WRONG")));
 }
 
 if(isset($_GET["site"])) {
