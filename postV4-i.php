@@ -7,20 +7,14 @@ $islem_adi = @$_GET["islem_adi_v"];
 
 $izinverilenler = array("api", "test-api");
 
-foreach($izinverilenler as $izinverilen) {
-if($islem_adi==$izinverilen) {
-    $izinverilendurum = 1;
-}
-}
-
-if($izinverilendurum!=1) {
-if(empty(trim($_SERVER["HTTP_USER_AGENT"]))) {
-die();
-}
-
-if(empty(trim($_SERVER["HTTP_REFERER"]))) {
+if(!in_array($islem_adi, $izinverilenler)) {
+    if(empty(trim($_SERVER["HTTP_USER_AGENT"]))) {
     die();
-}
+    }
+        
+    if(empty(trim($_SERVER["HTTP_REFERER"]))) {
+    die();
+    }
 }
 
 $inc = 1;
