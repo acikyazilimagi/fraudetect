@@ -1,7 +1,7 @@
 <?php
 /* v4r1able */
 session_start(); 
-error_reporting(E_ALL);
+error_reporting(0);
 date_default_timezone_set("Europe/Istanbul");
 
 if ($_SERVER['REQUEST_URI'] == "/") {
