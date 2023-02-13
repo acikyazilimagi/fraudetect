@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
 if ($inc != 1) {
   die();
 }
@@ -283,7 +283,7 @@ $gosterilecek = 10;
                         <td>' . $usomappend . '<a href="' . $httpappend . '' . htmlspecialchars($siteveri["site_tam_adresi"], ENT_QUOTES) . '" rel="nofollow noopener noreferrer" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-link"></i> ' . htmlspecialchars(substr($siteveri["site_tam_adresi"], 0, 30), ENT_QUOTES) . '</a>' . $usomappendend . '</td>
                         <td><a href="#" class="btn btn-info btn-sm"><i class="' . $ekleyenicon . '"></i> ' . $ekleyen . '</a></td>
                         <td><a href="?durum=' . htmlspecialchars($siteveri["durum"]) . '" class="btn btn-' . $renk . ' btn-sm"><i class="' . $durumicon . '"></i> ' . $durum . '</a></td>
-                        <td><a href="#" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i> ' . htmlspecialchars(timeConvert($siteveri["eklenme_tarihi"])) . '</a></td>
+                        <td><a href="#" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i> ' . timeConvert(htmlspecialchars($siteveri["eklenme_tarihi"])) . '</a></td>
                         <td><a href="#duzenle" onclick="duzenle(';
                     echo "'" . htmlspecialchars($siteveri["id"], ENT_QUOTES) . "', '" . htmlspecialchars($siteveri["site_adresi"], ENT_QUOTES) . "')" . '"';
                     echo 'style="color:white;" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i> Düzenle</a> <a onclick="sil(';
