@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set("Europe/Istanbul");
-error_reporting(E_ALL);
+error_reporting(0);
 $directory = __DIR__;
 require('siniflar/usom.class.php');
 
