@@ -32,29 +32,23 @@ if(isset($_POST["site"])) {
     $sosyalmedyalistesi = array("instagram.com", "facebook.com", "twitter.com");
     $wwwkaldir = str_replace("www.", "", $duzsiteadresi);
 
-    foreach($sosyalmedyalistesi as $sosyalmedyasite) {
-        if($wwwkaldir==$sosyalmedyasite) {
-            $sorgulamaiptal = 1;
+    if(!in_array($wwwkaldir, $sosyalmedyalistesi)) {
+        $sitesorgu = $baglanti->prepare("SELECT * FROM eklenen_siteler WHERE site_adresi = :siteadresi");
+        $sitesorgu->bindParam(":siteadresi", $duzsiteadresi, PDO::PARAM_STR);
+        $sitesorgu->fetchAll(PDO::FETCH_ASSOC);
+        $sitesorgu->execute();
+    
+        if($sitesorgu->rowCount()) {
+            foreach($sitesorgu as $siteveri) {
+                $site_eklenme_tarihi = $siteveri["eklenme_tarihi"];
+            }
+    
+            $cikti = array(
+                "id" => 2,
+                "mesaj" => 'Adres daha önce bildirilmiş'
+              );
+            die(json_encode($cikti));
         }
-    }
-
-    if($sorgulamaiptal!=1) {
-    $sitesorgu = $baglanti->prepare("SELECT * FROM eklenen_siteler WHERE site_adresi = :siteadresi");
-    $sitesorgu->bindParam(":siteadresi", $duzsiteadresi, PDO::PARAM_STR);
-    $sitesorgu->fetchAll(PDO::FETCH_ASSOC);
-    $sitesorgu->execute();
-
-    if($sitesorgu->rowCount()) {
-        foreach($sitesorgu as $siteveri) {
-            $site_eklenme_tarihi = $siteveri["eklenme_tarihi"];
-        }
-
-        $cikti = array(
-            "id" => 2,
-            "mesaj" => 'Adres daha önce bildirilmiş'
-          );
-        die(json_encode($cikti));
-    }
     }
 
     $kontrol = \usom::check($duzsiteadresi, 1);
