@@ -74,6 +74,8 @@ https://ornek.net/test/" style="height: 198px;" required></textarea>
 
     var sira = 0;
     for(i=0; i<siteler_bol.length; i++) {
+    (function(i){
+    setTimeout(function() {
     $.post("/postV4/site-ekle", {"site":siteler_bol[i], "tur":eklenme_turu}, function(cikti) {
     $("#bilgi_listesi").append(cikti.mesaj);
     sira++;
@@ -85,6 +87,8 @@ https://ornek.net/test/" style="height: 198px;" required></textarea>
 
     new Promise(resolve => setTimeout(resolve, 5000));
     $("#yenilebtn").show();
+    }, 5000);
+    });
     }
     });
     </script>
