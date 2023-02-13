@@ -36,7 +36,7 @@
 <div class="alert" id="hata" style="display:none;"><i class="fa fa-exclamation-circle"></i> Hata: <span id="hata_mesaji"></span></div>
 <div class="form-row-last">
 <a href="https://discord.gg/itdepremyardim" rel="nofollow" class="discord"><i class="fab fa-discord"></i></a>
-<a href="https://github.com/" rel="nofollow" class="github" style="margin-left:5px;"><i class="fab fa-github"></i></a>
+<a href="https://github.com/acikkaynak/fraudetect/" rel="nofollow" class="github" style="margin-left:5px;"><i class="fab fa-github"></i></a>
 </div>
 </form>
 </div>
