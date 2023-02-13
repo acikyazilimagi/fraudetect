@@ -64,7 +64,6 @@ if(isset($_GET["site"])) {
 
      try {
      $site_ekle->execute();
-     discord_mesaj($siteadresi);
      $cikti = array(
         "id" => 4,
         "mesaj" => ''.htmlspecialchars($siteadresi).' adresi eklendi'
