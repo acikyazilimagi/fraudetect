@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_URI'] == "/") {
 $sayfa_adi = @$_GET["sayfa_adi_v"];
 $inc = 1;
 include("ayarlar/baglanti.php");
+include("ayarlar/fonksiyonlar.php");
 
 if(!file_exists("sayfalar/" . $sayfa_adi . ".php")) {
     include("sayfalar/404.php");
