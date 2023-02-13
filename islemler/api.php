@@ -52,7 +52,8 @@ if(isset($_GET["site"])) {
 
      $suantarih = date("Y-m-d H:i:s");
      $ekleyenbilgi = array(
-        "ekleyen_id" => 3
+        "ekleyen_id" => 3,
+        "bot_ip" => gercek_ip()
      );
      $site_ekle = $baglanti->prepare("INSERT INTO eklenen_siteler(site_adresi, site_tam_adresi, ekleyen, durum, eklenme_tarihi) VALUES (:site_adresi, :site_tam_adresi, :ekleyen, :tur, :eklenme_tarihi)");
      $site_ekle->bindParam(":site_adresi", $duzsiteadresi, PDO::PARAM_STR);
