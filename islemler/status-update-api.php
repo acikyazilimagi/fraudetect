@@ -35,7 +35,7 @@ if(isset($_GET["site"])) {
         $site_id = $siteveri["id"];
     }
 
-    $guncelle = $baglanti->prepare("UPDATE eklenen_siteler SET durum = 3 WHERE id = :id");
+    $guncelle = $baglanti->prepare("UPDATE eklenen_siteler SET durum = 2 WHERE id = :id");
     $guncelle->bindParam(":id", $site_id, PDO::PARAM_INT);
 
      try {
