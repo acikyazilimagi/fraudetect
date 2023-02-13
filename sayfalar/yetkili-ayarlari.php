@@ -150,6 +150,9 @@ $gosterilecek = 10;
                       $renk = "danger";
                       $yasakliappend = "<del>";
                       $yasakliappendend = "</del>";
+                    } else {
+                      $yasakliappend = null;
+                      $yasakliappend = null;
                     }
 
                     echo '<tr id="' . htmlspecialchars($kullaniciveri["id"]) . '_kullanici">

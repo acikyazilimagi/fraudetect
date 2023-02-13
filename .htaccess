@@ -1,3 +1,4 @@
+Options All -Indexes
 DirectoryIndex index.php
 <Files ~ “^\.json”>
 Order allow,deny
