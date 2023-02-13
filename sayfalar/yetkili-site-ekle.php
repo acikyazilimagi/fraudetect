@@ -84,10 +84,8 @@ https://ornek.net/test/" style="height: 198px;" required></textarea>
     $("#baslatbtn").remove();
     }
     });
-
-    new Promise(resolve => setTimeout(resolve, 5000));
     $("#yenilebtn").show();
-    }, 5000);
+    }, 3000);
     });
     }
     });
