@@ -236,7 +236,11 @@ $gosterilecek = 10;
                       $ekleyen = "Form Bildirisi";
                       $ekleyenicon = "fa fa-wpforms";
                     } elseif ($ekleyen_bilgisi["ekleyen_id"] == 3) {
+                      if($ekleyen_bilgisi["bot_ip"]) {
                       $ekleyen = "BOT(" . htmlspecialchars($ekleyen_bilgisi["bot_ip"]) .")";
+                      } else {
+                      $ekleyen = "BOT"; 
+                      }
                       $ekleyenicon = "fa fa-desktop";
                     }
 
