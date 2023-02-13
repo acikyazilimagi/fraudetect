@@ -281,6 +281,10 @@ $gosterilecek = 10;
                                     } else {
                                         echo '<a href="?'.$aramaappend.''.$durumappend.'sayfa='.$i.'" class="btn btn-secondary">'.$i.'</a>';
                                     }
+
+                                    if($i==29) {
+                                      break;
+                                    }
                                 }
                                 ?>
             </div>
