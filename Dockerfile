@@ -34,7 +34,7 @@ RUN docker-php-ext-enable mysqli
 
 RUN docker-php-ext-install pdo pdo_mysql
 
-RUN echo "session.save_path="/tmp"" >> /opt/bitnami/php/lib/php.ini
+RUN echo "session.save_path="/tmp"" >> /etc/php/7.4/fpm/php.ini
 
 # Restart Apache
 RUN /etc/init.d/apache2 restart
