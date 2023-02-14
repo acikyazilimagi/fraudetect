@@ -298,7 +298,7 @@ $gosterilecek = 10;
           </div>
           <div class="bs-component" style="margin-bottom: 15px;">
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-              <div class="btn-group mr-2" role="group" aria-label="First group">
+              <div class="btn-group mr-2" role="group" aria-label="First group" style="display: block;">
                 <?php
                 if ($_GET["durum"]) {
                   $durumappend = "durum=" . htmlspecialchars($_GET["durum"]) . "&";
@@ -312,10 +312,6 @@ $gosterilecek = 10;
                     echo '<a href="?' . $aramaappend . '' . $durumappend . 'sayfa=' . $i . '" class="btn btn-info">' . $i . '</a>';
                   } else {
                     echo '<a href="?' . $aramaappend . '' . $durumappend . 'sayfa=' . $i . '" class="btn btn-secondary">' . $i . '</a>';
-                  }
-
-                  if ($i == 29) {
-                    break;
                   }
                 }
                 ?>
