@@ -5,10 +5,10 @@ Order allow,deny
 Deny from all
 Satisfy All
 </Files>
-<DirectoryMatch “^/.*/.git/”> 
-Order deny,allow 
-Deny from all 
-</DirectoryMatch>
+<Directorymatch "^/.*/\.git/">
+  Order 'deny,allow'
+  Deny from all
+</Directorymatch>
 
 RewriteEngine on
 RewriteRule ^([0-9a-zA-Z-_]+)$ index.php?sayfa_adi_v=$1 [L,QSA]
