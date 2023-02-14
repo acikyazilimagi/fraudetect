@@ -18,13 +18,6 @@ if(isset($_POST["site_id"])) {
     if(empty(trim($_POST["site_id"]))) { exit; }
 
     if(!is_numeric($_POST["site_id"])) { exit; }
-    if($kullanici_yetkisi!=2) {
-    $cikti = array(
-        "id" => 4,
-        "mesaj" => "Silme yetkiniz bulunmuyor."
-    );
-    die(json_encode($cikti));
-    }
 
     $kontrol = $baglanti->prepare("SELECT * FROM eklenen_siteler WHERE id = :id");
     $kontrol->bindParam(":id", $_POST["site_id"], PDO::PARAM_INT);
