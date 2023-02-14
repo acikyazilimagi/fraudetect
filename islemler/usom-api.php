@@ -24,6 +24,8 @@ if($fraudsiteler->rowCount()) {
             $guncelle->bindParam(":id", $siteveri["id"], PDO::PARAM_INT);
             $guncelle->execute();
         }
+
+        sleep(2);
     }
 }
 ?>
