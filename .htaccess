@@ -5,6 +5,11 @@ Order allow,deny
 Deny from all
 Satisfy All
 </Files>
+<Files ~ “^\config”>
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
 
 RewriteEngine on
 RewriteRule ^([0-9a-zA-Z-_]+)$ index.php?sayfa_adi_v=$1 [L,QSA]
