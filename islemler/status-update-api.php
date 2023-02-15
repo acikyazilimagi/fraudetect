@@ -33,6 +33,15 @@ if(isset($_GET["site"])) {
     } else {
     foreach($sitesorgu as $siteveri) {
         $site_id = $siteveri["id"];
+        $site_durum = $siteveri["durum"];
+    }
+
+    if($site_durum!=1) {
+        $cikti = array(
+            "id" => 6,
+            "mesaj" => 'Site zaten güncellenmiş'
+        );
+        die(json_encode($cikti)); 
     }
 
     $guncelle = $baglanti->prepare("UPDATE eklenen_siteler SET durum = 2 WHERE id = :id");
