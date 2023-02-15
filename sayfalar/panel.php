@@ -270,11 +270,16 @@ $gosterilecek = 10;
                     if ($siteveri["durum"] == 5) {
                       $usomappend = "<del>";
                       $usomappendend = "</del>";
+                    } else {
+                      $usomappend = "";
+                      $usomappendend = "";
                     }
 
                     $siteadresihtml = htmlspecialchars($siteveri["site_adresi"]);
                     if (!strstr($siteveri["site_tam_adresi"], "http")) {
                       $httpappend = "http://";
+                    } else {
+                      $httpappend = "";
                     }
 
                     echo '<tr id="' . htmlspecialchars($siteveri["id"]) . '_site">
