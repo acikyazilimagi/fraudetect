@@ -284,8 +284,8 @@ $gosterilecek = 10;
 
                     echo '<tr id="' . htmlspecialchars($siteveri["id"]) . '_site">
                         <td>' . htmlspecialchars($siteveri["id"]) . '</td>
-                        <td>' . $usomappend . '<a href="http://' . htmlspecialchars($siteveri["site_adresi"]) . '" class="btn btn-primary btn-sm" rel="nofollow noopener noreferrer" target="_blank"><i class="fa fa-globe"></i> ' . htmlspecialchars(substr($siteveri["site_adresi"], 0, 30), ENT_QUOTES) . '</a>' . $usomappendend . '</td>
-                        <td>' . $usomappend . '<a href="' . $httpappend . '' . htmlspecialchars($siteveri["site_tam_adresi"], ENT_QUOTES) . '" rel="nofollow noopener noreferrer" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-link"></i> ' . htmlspecialchars(substr($siteveri["site_tam_adresi"], 0, 30), ENT_QUOTES) . '</a>' . $usomappendend . '</td>
+                        <td>' . $usomappend . '<a href="http://' . htmlspecialchars($siteveri["site_adresi"]) . '" class="btn btn-primary btn-sm" rel="nofollow noopener noreferrer" target="_blank"><i class="fa fa-globe"></i> ' . htmlspecialchars(substr($siteveri["site_adresi"], 0, 23), ENT_QUOTES) . '</a>' . $usomappendend . '</td>
+                        <td>' . $usomappend . '<a href="' . $httpappend . '' . htmlspecialchars($siteveri["site_tam_adresi"], ENT_QUOTES) . '" rel="nofollow noopener noreferrer" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-link"></i> ' . htmlspecialchars(substr($siteveri["site_tam_adresi"], 0, 23), ENT_QUOTES) . '</a>' . $usomappendend . '</td>
                         <td><a href="#" class="btn btn-info btn-sm"><i class="' . $ekleyenicon . '"></i> ' . $ekleyen . '</a></td>
                         <td><a href="#" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i> ' . timeConvert(htmlspecialchars($siteveri["eklenme_tarihi"])) . '</a></td>
                         <td><a href="?durum=' . htmlspecialchars($siteveri["durum"]) . '" class="btn btn-' . $renk . ' btn-sm"><i class="' . $durumicon . '"></i> ' . $durum . '</a></td>
