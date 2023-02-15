@@ -151,8 +151,8 @@ $gosterilecek = 10;
                       $yasakliappend = "<del>";
                       $yasakliappendend = "</del>";
                     } else {
-                      $yasakliappend = null;
-                      $yasakliappend = null;
+                      $yasakliappend = "";
+                      $yasakliappend = "";
                     }
 
                     echo '<tr id="' . htmlspecialchars($kullaniciveri["id"]) . '_kullanici">
