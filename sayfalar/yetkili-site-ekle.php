@@ -92,7 +92,7 @@ https://ornek.net/test/" style="height: 198px;" required></textarea>
               }
             });
             $("#yenilebtn").show();
-          }, 3000);
+          }, 400);
         });
       }
     });
