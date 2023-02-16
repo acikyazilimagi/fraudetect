@@ -11,6 +11,8 @@ if($_SESSION["oturum_bilgileri"]["kullanici_id"]!=1) { die(json_encode(array("er
 
 if(empty(trim($_GET["tarih"]))) { $listelenen = "Bugün"; $goruntule = file_get_contents("log/".date("Y-m-d")."-silinenler.json"); } else { $listelenen = htmlspecialchars($_GET["tarih"]); $goruntule = file_get_contents("log/".htmlspecialchars($_GET["tarih"])."-silinenler.json"); }
 
+echo "View: ".$goruntule;
+
 echo "Listelenen tarih: ".$listelenen."<br><br>";
 foreach(json_decode($goruntule, true) as $kayit) {
     echo "Silinen alan adı: ".htmlspecialchars($kayit["silinen_alan_adi"])."<br>
