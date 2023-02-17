@@ -1,12 +1,15 @@
 <?php
 error_reporting(0);
+set_time_limit(0);
 date_default_timezone_set("Europe/Istanbul");
-require('siniflar/usom.class.php');
+include("siniflar/usom.class.php");
 
 $apikey = getenv("API_KEY");
 if($_GET["key"]!==$apikey) {
     die(json_encode(array("error_message" => "API KEY IS WRONG")));
 }
+
+if(empty(trim(($_POST["site"])))) { die(json_encode(array("error_message" => "SITE IS WRONG"))); }
 
 $inc = 1;
 include("ayarlar/baglanti.php");
@@ -25,7 +28,7 @@ if($fraudsiteler->rowCount()) {
             $guncelle->execute();
         }
 
-        sleep(2);
+        sleep(1);
     }
 }
 ?>
