@@ -9,8 +9,6 @@ if($_GET["key"]!==$apikey) {
     die(json_encode(array("error_message" => "API KEY IS WRONG")));
 }
 
-if(empty(trim(($_POST["site"])))) { die(json_encode(array("error_message" => "SITE IS WRONG"))); }
-
 $inc = 1;
 include("ayarlar/baglanti.php");
 
