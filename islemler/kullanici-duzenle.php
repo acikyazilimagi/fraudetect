@@ -39,12 +39,14 @@ if (isset($_POST["kullanici_id"])) {
         }
     }
 
-    if ($k_yetki_seviyesi == 2) {
-        $cikti = array(
-            "id" => 2,
-            "mesaj" => "Güncellenemedi, bu kullanıcıya yetkiniz bulunmuyor."
-        );
-        die(json_encode($cikti));
+    if ($_SESSION["oturum_bilgileri"]["kullanici_id"] != 1) {
+        if ($k_yetki_seviyesi == 2) {
+            $cikti = array(
+                "id" => 2,
+                "mesaj" => "Güncellenemedi, bu kullanıcıya yetkiniz bulunmuyor."
+            );
+            die(json_encode($cikti));
+        }
     }
 
     $guncelle = $baglanti->prepare("UPDATE kullanicilar SET parola = :yeniparola WHERE id = :id");
@@ -66,4 +68,3 @@ if (isset($_POST["kullanici_id"])) {
         die(json_encode($cikti));
     }
 }
-?>
