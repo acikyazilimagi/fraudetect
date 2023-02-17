@@ -150,7 +150,7 @@ $gosterilecek = 10;
                       $renk = "danger";
                       $yasakliappend = "<del>";
                       $yasakliappendend = "</del>";
-                    } else {
+                    } elseif ($kullaniciveri["yetki_seviyesi"] != 0) {
                       $yasakliappend = "";
                       $yasakliappendend = "";
                     }
